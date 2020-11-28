@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/McImage.iml" filepath="$PROJECT_DIR$/McImage.iml" group="McImage" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/123978235/McImageWorkspace.iml" filepath="$PROJECT_DIR$/.idea/modules/123978235/McImageWorkspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/McImageWorkspace.McImage.iml" filepath="$PROJECT_DIR$/.idea/modules/McImageWorkspace.McImage.iml" />
     </modules>
   </component>
 </project>

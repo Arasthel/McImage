@@ -3,7 +3,7 @@ apply plugin: 'signing'
 
 def DEBUG = false
 def VERSION = '1.5.0-SNAPSHOT'
-def GROUP = 'com.arasthel’
+def GROUP = 'com.arasthel'
 def ARTIFACT = 'McImage'
 
 Properties properties = new Properties()
@@ -18,25 +18,25 @@ static def isSnapshot(def version) {
 uploadArchives {
     repositories {
         mavenDeployer {
-            if (DEBUG) {
+//            if (DEBUG) {
                 repository(url: uri("${buildDir}/libs"))
-            } else {
-                if (isSnapshot(VERSION)) {
-                    repository(url: uri(properties.getProperty('MAVEN_SNAPSHOT_REPO'))) {
-                        authentication(
-                                userName: properties.getProperty('MAVEN_USER_NAME'),
-                                password: properties.getProperty('MAVEN_PASSWORD')
-                        )
-                    }
-                } else {
-                    repository(url: uri(properties.getProperty('MAVEN_RELEASE_REPO'))) {
-                        authentication(
-                                userName: properties.getProperty('MAVEN_USER_NAME'),
-                                password: properties.getProperty('MAVEN_PASSWORD')
-                        )
-                    }
-                }
-            }
+//            } else {
+//                if (isSnapshot(VERSION)) {
+//                    repository(url: uri(properties.getProperty('MAVEN_SNAPSHOT_REPO'))) {
+//                        authentication(
+//                                userName: properties.getProperty('MAVEN_USER_NAME'),
+//                                password: properties.getProperty('MAVEN_PASSWORD')
+//                        )
+//                    }
+//                } else {
+//                    repository(url: uri(properties.getProperty('MAVEN_RELEASE_REPO'))) {
+//                        authentication(
+//                                userName: properties.getProperty('MAVEN_USER_NAME'),
+//                                password: properties.getProperty('MAVEN_PASSWORD')
+//                        )
+//                    }
+//                }
+//            }
             pom.groupId = GROUP
             pom.artifactId = ARTIFACT
             pom.version = VERSION
